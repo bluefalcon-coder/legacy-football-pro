@@ -1,0 +1,16 @@
+{
+  "name": "legacy-football-pro",
+  "short_name": "legacy-football-pro",
+  "description": "The full coach's version of Legacy Football: formations, hot routes and Playbook Studio.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "landscape",
+  "background_color": "#06182a",
+  "theme_color": "#06182a",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
