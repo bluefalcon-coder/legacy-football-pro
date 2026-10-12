@@ -6,11 +6,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#0a0e22">
-<title>Legacy - Flag Football</title>
+<meta name="theme-color" content="#06182a">
+<title>Legacy Football Pro</title>
 <meta name="description" content="Legacy is a flag football game you play every snap of. Pick a team, play a season, chase the title. Free, no accounts, no ads.">
-<meta name="apple-mobile-web-app-title" content="legacy-football">
-<meta name="application-name" content="legacy-football">
+<meta name="apple-mobile-web-app-title" content="legacy-football-pro">
+<meta name="application-name" content="legacy-football-pro">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:title" content="Legacy - Flag Football">
 <meta property="og:description" content="Play every snap. Chase the title. Build your legacy.">
@@ -397,6 +397,11 @@
   body.cb #mom i[style*="ff6b6b"],body.cb #mom i[style*="rgb(255, 107, 107)"]{background:linear-gradient(90deg,#ffb347,#ffd400)!important}
   body.cb #noise i[style*="7dff9a"],body.cb #noise i[style*="rgb(125, 255, 154)"]{background:linear-gradient(90deg,#7dd3ff,#5ab8ff)!important}
   body.cb #noise i[style*="ff5c5c"],body.cb #noise i[style*="rgb(255, 92, 92)"]{background:linear-gradient(90deg,#ffb347,#d9822b)!important}
+
+  :root.pro{--gold:#5fd3ff;--navy:#06182a;--panel:rgba(8,24,44,.92)}
+  :root.pro .b.pri{background:linear-gradient(180deg,#a6ecff,#2aa9e8);color:#01202e;border-color:#5fd3ff}
+  :root.pro #snapBtn{background:linear-gradient(180deg,#a6ecff,#2aa9e8)!important;color:#01202e!important}
+  :root.pro h1.logo{background:linear-gradient(180deg,#fff 10%,#5fd3ff 90%);-webkit-background-clip:text;background-clip:text}
 </style>
 </head>
 <body>
@@ -453,7 +458,7 @@ const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { c
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 // ---------- saved data (browser storage, always wrapped so the game still works if it is blocked) ----------
-const BUILD_ED = 'football';       // build.py swaps this to 'pro' for the Legacy Football Pro build
+const BUILD_ED = 'pro';       // build.py swaps this to 'pro' for the Legacy Football Pro build
 const KEY = BUILD_ED === 'pro' ? 'legacy_v3_pro' : 'legacy_v3';        // Pro keeps its own saves even if both games live on the same website
 let mem = null;
 const store = {
